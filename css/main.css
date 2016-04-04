@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -77,7 +78,9 @@ table {
   /* note the padding around a left floated image */ }
 
 body {
-  background: #2B1932; }
+  background: #2B1932;
+  font-family: 'Oswald', sans-serif;
+  color: #fff; }
 
 #hero {
   background: url("../images/dinnerTable.jpg") center;
@@ -85,17 +88,37 @@ body {
   padding: 180px 0; }
 
 .img-responsive {
-  width: 100%; }
+  width: 80%;
+  margin: 0 auto; }
 
 #recipes {
   text-align: center;
-  padding: 100px 0;
-  padding-bottom: 150px; }
-  #recipes select {
-    background: #2B1932;
-    color: #fff;
-    font-size: 2em;
-    border: 5px solid #fff;
-    text-align: center; }
+  padding-top: 60px;
+  font-size: 3em;
+  font-weight: 300; }
+  #recipes p {
+    padding-bottom: 20px; }
+
+.un-button, .custom-button {
+  font-size: 0.6em;
+  border: 2px solid #fff;
+  color: #fff; }
+
+.un-button {
+  width: 420px;
+  background: #2B1932;
+  border-right: none; }
+
+.btn.un-button:hover, .btn.un-button:visited, .btn.un-button:active {
+  color: #fff;
+  z-index: 0;
+  cursor: default; }
+
+.custom-button {
+  background: #D86D2F;
+  border-left: none; }
+
+.dropdown-menu {
+  width: 466px; }
 
 /*# sourceMappingURL=main.css.map */
