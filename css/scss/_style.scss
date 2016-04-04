@@ -1,0 +1,23 @@
+body{
+  background:$dark;
+}
+
+#hero{
+  background: url("../images/dinnerTable.jpg") center;
+  background-size: cover;
+  padding: 180px 0;
+}
+.img-responsive{
+  width: 100%;
+}
+#recipes{
+  text-align: center;
+  padding-top: 100px;
+  select{
+    background:$dark;
+    color: #fff;
+    font-size: 2em;
+    border: 5px solid #fff;
+    text-align: center;
+  }
+}
