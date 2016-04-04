@@ -23,6 +23,9 @@ body{
   p{
     padding-bottom:20px;
   }
+  .btn-group{
+    width: 100%;
+  }
 }
 .un-button,.custom-button{
   font-size: 0.6em;
@@ -30,7 +33,7 @@ body{
   color: #fff;
 }
 .un-button{
-  width: 420px;
+  width: 90%;
   background: $dark;
   border-right: none;
 }
@@ -44,5 +47,27 @@ body{
   border-left: none;
 }
 .dropdown-menu{
-  width: 466px;
+  width: 90%;
+}
+
+@media (max-width:767px) {
+  #hero{
+    padding: 100px 0;
+  }
+  .img-responsive{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .un-button,.custom-button{
+  font-size: 0.5em;
+  }
+  .un-button{
+  width: 80%;
+}
+.custom-button{
+  width: 20%;
+}
+.dropdown-menu{
+  width: 100%;
+}
 }
