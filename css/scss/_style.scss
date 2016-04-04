@@ -1,5 +1,7 @@
 body{
   background:$dark;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
 }
 
 #hero{
@@ -7,17 +9,40 @@ body{
   background-size: cover;
   padding: 180px 0;
 }
+
 .img-responsive{
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
+
 #recipes{
   text-align: center;
-  padding-top: 100px;
-  select{
-    background:$dark;
-    color: #fff;
-    font-size: 2em;
-    border: 5px solid #fff;
-    text-align: center;
+  padding-top: 60px;
+  font-size: 3em;
+  font-weight: 300;
+  p{
+    padding-bottom:20px;
   }
+}
+.un-button,.custom-button{
+  font-size: 0.6em;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.un-button{
+  width: 420px;
+  background: $dark;
+  border-right: none;
+}
+.btn.un-button:hover, .btn.un-button:visited, .btn.un-button:active{
+  color: #fff;
+  z-index: 0;
+  cursor: default;
+}
+.custom-button{
+  background: $fall;
+  border-left: none;
+}
+.dropdown-menu{
+  width: 466px;
 }
