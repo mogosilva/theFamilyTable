@@ -82,7 +82,7 @@ body {
   font-family: 'Oswald', sans-serif;
   color: #fff; }
 
-#hero {
+.hero {
   background: url("../images/dinnerTable.jpg") center;
   background-size: cover;
   padding: 180px 0; }
@@ -98,8 +98,6 @@ body {
   font-weight: 300; }
   #recipes p {
     padding-bottom: 20px; }
-  #recipes .btn-group {
-    width: 100%; }
 
 .un-button, .custom-button {
   font-size: 0.6em;
@@ -107,7 +105,7 @@ body {
   color: #fff; }
 
 .un-button {
-  width: 90%;
+  width: 35vw;
   background: #2B1932;
   border-right: none; }
 
@@ -123,6 +121,33 @@ body {
 .dropdown-menu {
   width: 90%; }
 
+/****************************************************************************/
+.recipePageHeader {
+  border-bottom: 32px solid #2B1932; }
+
+.mainImageContainer {
+  height: 325px; }
+
+.recipeLabel {
+  background: url("../images/recipeName.svg") center center no-repeat;
+  background-size: cover;
+  height: 120px;
+  width: 400px;
+  position: relative;
+  top: 294px;
+  margin: 0 auto; }
+  .recipeLabel p {
+    padding-top: 30px;
+    font-size: 2em;
+    text-align: center; }
+
+.recipeMain {
+  background: #DCBD8F; }
+
+.ham {
+  background: url("../images/ham.jpeg") center center no-repeat;
+  background-size: cover; }
+
 @media (max-width: 767px) {
   #hero {
     padding: 100px 0; }
@@ -135,10 +160,7 @@ body {
     font-size: 0.5em; }
 
   .un-button {
-    width: 80%; }
-
-  .custom-button {
-    width: 20%; }
+    width: 65vw; }
 
   .dropdown-menu {
     width: 100%; } }

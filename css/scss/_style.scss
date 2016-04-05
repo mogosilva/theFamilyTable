@@ -4,7 +4,7 @@ body{
   color: #fff;
 }
 
-#hero{
+.hero{
   background: url("../images/dinnerTable.jpg") center;
   background-size: cover;
   padding: 180px 0;
@@ -23,9 +23,6 @@ body{
   p{
     padding-bottom:20px;
   }
-  .btn-group{
-    width: 100%;
-  }
 }
 .un-button,.custom-button{
   font-size: 0.6em;
@@ -33,7 +30,7 @@ body{
   color: #fff;
 }
 .un-button{
-  width: 90%;
+  width: 35vw;
   background: $dark;
   border-right: none;
 }
@@ -49,6 +46,42 @@ body{
 .dropdown-menu{
   width: 90%;
 }
+/****************************************************************************/
+
+.recipePageHeader{
+  border-bottom: 32px solid $dark;
+}
+.mainImageContainer{
+  height: 325px;
+}
+
+.recipeLabel{
+ background:url("../images/recipeName.svg")center center no-repeat;
+ background-size: cover;
+ height: 120px;
+ width:400px;
+ position: relative;
+ top: 294px;
+ margin:0 auto;
+ p{
+  padding-top: 30px;
+  font-size: 2em;
+  text-align: center;
+ }
+}
+
+.recipeMain{
+  background:$recipeBG;
+}
+
+.ham{
+  background: url("../images/ham.jpeg")center center no-repeat;
+  background-size: cover;
+}
+
+
+
+
 
 @media (max-width:767px) {
   #hero{
@@ -62,12 +95,9 @@ body{
   font-size: 0.5em;
   }
   .un-button{
-  width: 80%;
-}
-.custom-button{
-  width: 20%;
-}
-.dropdown-menu{
-  width: 100%;
-}
+    width: 65vw;
+  }
+  .dropdown-menu{
+    width: 100%;
+  }
 }
