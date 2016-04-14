@@ -86,12 +86,14 @@ body {
 .hero {
   background: url("../images/dinnerTable.jpg") center;
   background-size: cover;
-  padding: 180px 0; }
+  padding: 100px 0; }
 
 .logo {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   box-shadow: 2px 3px 8px 2px #160d19; }
+
+.img-responsive {
+  margin: 0 auto; }
 
 #recipes {
   text-align: center;
@@ -103,12 +105,12 @@ body {
     padding-bottom: 20px; }
 
 .un-button, .custom-button {
-  font-size: 0.6em;
+  font-size: 0.5em;
   border: 2px solid #fff;
   color: #fff; }
 
 .un-button {
-  width: 35vw;
+  width: 61vw;
   background: #2B1932;
   border-right: none; }
 
@@ -122,7 +124,7 @@ body {
   border-left: none; }
 
 .dropdown-menu {
-  width: 90%; }
+  width: 100%; }
 
 /****************************************************************************/
 .recipePageHeader {
@@ -147,7 +149,7 @@ body {
 .recipeMain {
   background: #DCBD8F;
   color: #2B1932;
-  padding-top: 7em;
+  padding-top: 4em;
   font-size: 1em;
   font-family: 'Fira Sans', sans-serif;
   line-height: 1.6; }
@@ -186,6 +188,15 @@ body {
 .ingredients, .instructions, .nutrition {
   padding-bottom: 30px; }
 
+.ingredients {
+  padding-top: 2em; }
+  .ingredients .crossOut {
+    text-decoration: line-through; }
+  .ingredients .groceryMode {
+    padding-left: 44px;
+    background: url("../images/groceryMode.svg") center left no-repeat;
+    background-color: #BCD5DD; }
+
 .recipeFooter {
   text-align: center;
   padding: 20px 0; }
@@ -209,21 +220,19 @@ body {
   .recipeFooter img {
     width: 60%; }
 
-@media (max-width: 767px) {
-  #hero {
-    padding: 100px 0; }
+button {
+  background: #D86D2F;
+  border: none;
+  padding: 0px 7px;
+  padding-top: 4px;
+  vertical-align: middle; }
 
-  .img-responsive {
-    width: 100%;
-    margin: 0 auto; }
-
-  .un-button, .custom-button {
-    font-size: 0.5em; }
-
-  .un-button {
-    width: 61vw; }
-
-  .dropdown-menu {
-    width: 100%; } }
+button + p {
+  display: inline-block;
+  background: #2B1932;
+  color: #fff;
+  padding: 2px 20px;
+  margin-left: -4.5px;
+  vertical-align: middle; }
 
 /*# sourceMappingURL=main.css.map */
