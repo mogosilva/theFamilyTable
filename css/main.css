@@ -208,7 +208,7 @@ a, a:hover, a:active, a:visited {
   transform: rotate(-90deg); }
 
 .ham {
-  background: url("../images/ham.jpeg") center center no-repeat;
+  background: url("../images/ham.png") center center no-repeat;
   background-size: cover; }
 
 .notUsed {
