@@ -111,6 +111,7 @@ body {
 
 .un-button {
   padding: 6px;
+  width: 218px;
   background: #2B1932;
   border-right: none; }
 
@@ -268,6 +269,7 @@ button + p {
 
 @media (min-width: 768px) {
   .un-button {
-    padding: 6px 15vw; } }
+    padding: 6px 15vw;
+    width: initial; } }
 
 /*# sourceMappingURL=main.css.map */

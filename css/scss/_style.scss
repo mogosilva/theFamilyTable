@@ -36,6 +36,7 @@ body{
 }
 .un-button{
   padding: 6px;
+  width: 218px;
   background: $dark;
   border-right: none;
 }
@@ -237,5 +238,6 @@ a, a:hover, a:active, a:visited{
 @media (min-width: 768px) {
    .un-button{
        padding: 6px 15vw;
+       width: initial;
    }
 }
