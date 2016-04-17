@@ -1,14 +1,18 @@
 
 
-function checkUnChecked(checkbox){
+function groceryModeSwitch(checkbox){
 	$(".ingredients ul").toggleClass("groceryMode");
 
 	if($(checkbox).hasClass("checked")){
 		$("button>img").attr("src", "images/checked.svg");
+		$("#groceryText").text("Exit Grocery List?");
+
 	}
 	else{
 		$("button>img").attr("src", "images/close.svg");
 		$(".ingredients li").removeClass("crossOut");
+		$(".allIngredients").removeClass("active");
+		$("#groceryText").text("View as Grocery List?");
 	}
 }
 
@@ -25,6 +29,16 @@ function collapseMenus(arrowParent){
 
 }
 
+function allCrossedOut(){
+
+	if( $(".crossOut").length === ($(".ingredients li:not(.allIngredients)").length)){
+		$(".allIngredients").addClass("active");
+	}
+	else{
+		$(".allIngredients").removeClass("active");
+	}
+}
+
 
 
 $(document).ready(function(){
@@ -39,15 +53,16 @@ $('img[src="images/arrow.svg"]').click(function (){
 
 $(".recipeMain button").on("click", function(){
 	$(this).toggleClass("checked");
-	checkUnChecked(this);
+	groceryModeSwitch(this);
 });
 
 
 
-$(".ingredients li").on("click", function (){
+$(".ingredients li:not(.allIngredients)").on("click", function (){
 
 	if( $(".ingredients ul").hasClass("groceryMode") ){
 		$(this).toggleClass("crossOut");
+		allCrossedOut();
 	}
 
 });
