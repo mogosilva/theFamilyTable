@@ -39,11 +39,25 @@ function allCrossedOut(){
 	}
 }
 
+function checkTime(){
+	var currentDate = new Date();
+	var hours = currentDate.getHours();
+	var buttonText = $(".un-button span");
 
+	if (hours < 11){
+		buttonText.text("breakfast");
+	}
+	else if ( hours < 14){
+		buttonText.text("lunch");
+	}
+	else if ( hours < 24){
+		buttonText.text("dinner");
+	}
+}
 
 $(document).ready(function(){
 
-
+checkTime();
 //clicking on the ingredients arrow closes the ingredients list
 $('img[src="images/arrow.svg"]').click(function (){
 	$(this).toggleClass("rotate");
@@ -57,7 +71,6 @@ $(".recipeMain button").on("click", function(){
 });
 
 
-
 $(".ingredients li:not(.allIngredients)").on("click", function (){
 
 	if( $(".ingredients ul").hasClass("groceryMode") ){
@@ -67,15 +80,6 @@ $(".ingredients li:not(.allIngredients)").on("click", function (){
 
 });
 
-
-
-//clicking on the menu causes a side menu to appear
-/*
-$(".menu").click(function (){
-	$(".menu").toggleClass("visible");
-	$("#offscreenMenu").toggleClass("visible");
-});
-*/
 
 
 });
