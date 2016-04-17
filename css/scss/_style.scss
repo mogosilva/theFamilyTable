@@ -91,33 +91,33 @@ a, a:hover, a:active, a:visited{
   font-family: 'Fira Sans', sans-serif;
   line-height: 1.6;
 
+.fa-play{
+  transition: transform 0.3s ease-in-out;
+  margin-left: 5px;
+}
+.fa-minus{
+  vertical-align: middle;
+}
   
   section{ 
-    img[src="images/arrow.svg"] {
-      width: 18px;
-      vertical-align: middle;
-      transition: transform 0.3s ease-in-out;
-      cursor:pointer;
-    }
     ol,ul{
       padding:10px 0;
     }
     h3{
       display: inline-block;
-      vertical-align: top;
       font-weight: 700;
-      position: relative;
     }
     ol{
       list-style: decimal;
-      padding-left:20px;
+      padding-left:24px;
       font-weight: 700;
       span{
         font-weight: 400;
+        padding-left: 6px;
       }
     }
     ul{
-      padding-left:5px;
+      padding-left:8px;
       transition: padding 0.1s ease-in-out, background-color 0.4s ease-in-out;
       position:relative;
       overflow: hidden;
@@ -125,9 +125,6 @@ a, a:hover, a:active, a:visited{
       span{
         padding-left: 10px;
         
-      }
-      img{
-        width:8px;
       }
     }
   }
@@ -156,16 +153,12 @@ a, a:hover, a:active, a:visited{
 }
 
 .rotate{
-      transform: rotate(-90deg);
+      transform: rotate(90deg);
 }
 
 .ham{
   background: url("../images/ham.png")center center no-repeat;
   background-size: cover;
-}
-
-.notUsed{
-  display: none;
 }
 
 .ingredients,.instructions,.nutrition{
@@ -217,14 +210,14 @@ a, a:hover, a:active, a:visited{
     width: 60%;
   }
 }
-  button{
+  .groceryCheck{
     background:$fall;
     border: none;
-    padding: 0px 7px;
-    padding-top: 4px;
     vertical-align: middle;
+    padding:6.7px;
+    color:#fff;
   }
-  button+p{
+  .groceryCheck+p{
     display: inline-block;
     background: $dark;
     color: #fff;
