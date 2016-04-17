@@ -39,6 +39,7 @@ function allCrossedOut(){
 	}
 }
 
+
 function checkTime(){
 	var currentDate = new Date();
 	var hours = currentDate.getHours();
@@ -50,7 +51,7 @@ function checkTime(){
 	else if ( hours < 14){
 		buttonText.text("lunch");
 	}
-	else if ( hours < 24){
+	else if ( hours <= 24){
 		buttonText.text("dinner");
 	}
 }
