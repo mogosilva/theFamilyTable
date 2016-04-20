@@ -160,7 +160,8 @@ a, a:hover, a:active, a:visited {
   line-height: 1.6; }
   .recipeMain .fa-play {
     transition: transform 0.3s ease-in-out;
-    margin-left: 5px; }
+    margin-left: 5px;
+    cursor: pointer; }
   .recipeMain .fa-minus {
     vertical-align: middle; }
   .recipeMain section ol, .recipeMain section ul {
@@ -177,11 +178,12 @@ a, a:hover, a:active, a:visited {
       padding-left: 6px; }
   .recipeMain section ul {
     padding-left: 8px;
-    transition: padding 0.1s ease-in-out, background-color 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
     position: relative;
     overflow: hidden; }
     .recipeMain section ul span {
-      padding-left: 10px; }
+      padding-left: 10px;
+      cursor: default; }
 
 .allIngredients {
   position: absolute;
@@ -222,36 +224,39 @@ a, a:hover, a:active, a:visited {
     background: url("../images/groceryMode.svg") center left no-repeat;
     background-color: #BCD5DD;
     background-repeat-y: inherit; }
+    .ingredients .groceryMode span {
+      cursor: pointer; }
 
-.recipeFooter {
+footer {
   text-align: center;
   padding: 20px 0; }
-  .recipeFooter .author {
+  footer .author {
     padding-bottom: 20px; }
-  .recipeFooter span {
+  footer span {
     color: #fff;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 500;
     font-size: 1.3em; }
-  .recipeFooter p {
+  footer p {
     text-align: left;
     line-height: 1.5;
     font-size: 0.8em;
     color: #ffc8ff; }
-  .recipeFooter .actually {
+  footer .actually {
     font-family: "Oswald", sans-serif;
     font-size: 1em;
     color: #ffc8ff;
     border-bottom: 3px solid #ffc8ff; }
-  .recipeFooter img {
-    width: 60%; }
+  footer img {
+    width: 15em; }
 
 .groceryCheck {
   background: #D86D2F;
   border: none;
   vertical-align: middle;
   padding: 6.7px;
-  color: #fff; }
+  color: #fff;
+  cursor: pointer; }
 
 .groceryCheck + p {
   display: inline-block;
@@ -264,6 +269,9 @@ a, a:hover, a:active, a:visited {
 @media (min-width: 768px) {
   .un-button {
     padding: 6px 15vw;
-    width: initial; } }
+    width: initial; }
+
+  footer img {
+    float: right; } }
 
 /*# sourceMappingURL=main.css.map */
