@@ -94,6 +94,7 @@ a, a:hover, a:active, a:visited{
 .fa-play{
   transition: transform 0.3s ease-in-out;
   margin-left: 5px;
+  cursor: pointer;
 }
 .fa-minus{
   vertical-align: middle;
@@ -118,13 +119,14 @@ a, a:hover, a:active, a:visited{
     }
     ul{
       padding-left:8px;
-      transition: padding 0.1s ease-in-out, background-color 0.4s ease-in-out;
+      transition:background-color 0.4s ease-in-out;
       position:relative;
       overflow: hidden;
 
+
       span{
         padding-left: 10px;
-        
+        cursor: default;
       }
     }
   }
@@ -176,12 +178,16 @@ a, a:hover, a:active, a:visited{
     background:url("../images/groceryMode.svg")center left no-repeat;
     background-color:#BCD5DD;
     background-repeat-y: inherit;
+
+    span{
+      cursor: pointer;
+    }
   }
 }
 
 
 
-.recipeFooter{
+footer{
   text-align: center;
   padding: 20px 0;
   .author{
@@ -207,7 +213,7 @@ a, a:hover, a:active, a:visited{
     border-bottom: 3px solid $dark*8;
   }
   img{
-    width: 60%;
+    width: 15em;
   }
 }
   .groceryCheck{
@@ -216,6 +222,7 @@ a, a:hover, a:active, a:visited{
     vertical-align: middle;
     padding:6.7px;
     color:#fff;
+    cursor: pointer;
   }
   .groceryCheck+p{
     display: inline-block;
@@ -225,12 +232,3 @@ a, a:hover, a:active, a:visited{
     margin-left: -4.5px;
     vertical-align: middle;
   }
-
-
-//SMALL DEVICES -- col-sm AND UP
-@media (min-width: 768px) {
-   .un-button{
-       padding: 6px 15vw;
-       width: initial;
-   }
-}
