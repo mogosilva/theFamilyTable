@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,13 +17,13 @@
 	<!-- Main CSS -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body ng-controller="recipesController">
 	<div class="container-fluid">
 		<header class="recipePageHeader">
 			<div class="row mainImageContainer ham">
 				<div class="col-xs-12 ">
 					<div class="recipeLabel">
-						<p>BOURBON HONEY HAM</p>
+						<p>{{ title | uppercase }}</p>
 					</div>
 				</div>
 			</div>
@@ -42,13 +42,7 @@
 					<h3>INGREDIENTS</h3>
 					
 					<ul>
-					 	<li><i class="fa fa-minus" aria-hidden="true"></i><span>2/3 cup bourbon or whiskey</span></li>
-					 	<li><i class="fa fa-minus" aria-hidden="true"></i><span>1 cup clover honey</span></li>
-					 	<li><i class="fa fa-minus" aria-hidden="true"></i></i><span>1/3 cup molasses</span></li>
-					 	<li><i class="fa fa-minus" aria-hidden="true"></i><span>1/2 cup 100% fruit orange marmalade</span></li>
-					 	<li><i class="fa fa-minus" aria-hidden="true"></i></i><span>Nonstick cooking spray</span></li>
-					 	<li><i class="fa fa-minus" aria-hidden="true"></i><span>1 (5 pound) whole bone-in smoked ham, fully cooked, unsliced</span></li>
-					 	<li><i class="fa fa-minus" aria-hidden="true"></i><span>1/8 cup whole cloves</span>
+					 	<li ng-repeat="ingredient in ingredients"><i class="fa fa-minus" aria-hidden="true"></i><span>{{ ingredient }}</span></li>
 					 	</li>
 
 					 	<li class="allIngredients clearfix">
@@ -71,15 +65,7 @@
 					<h3>INSTRUCTIONS</h3>
 					
 					<ol>
-						<li><span>Preheat oven to 350 degrees F&#176;</span></li>
-						<li><span>In a medium saucepan, heat bourbon, honey, molasses, and marmalade over medium heat for 30 minutes or until reduced by half</span></li>
-						<li><span>Set aside</span></li>
-						<li><span>With a sharp knife, cut a diamond pattern on the fatty part of the ham</span></li>
-						<li><span>Stud whole cloves in each diamond, at points where lines cross.</span></li>
-						<li><span>Spread half of the bourbon glaze over the ham</span></li>
-						<li><span>Roast ham for 30 minutes, uncovered</span></li>
-						<li><span>Baste occasionally with remaining glaze and continue to roast for another 15 minutes</span></li>
-						<li><span>Let ham stand for 20 minutes before slicing</span></li>
+						<li ng-repeat="instruction in instructions"><span>{{ instruction }}</span></li>
 					</ol>
 				</section>
 			</div>
@@ -92,8 +78,8 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-4 author">
 
-					<p>RECIPE BY: <span>MOISES SILVA</span></p>
-					<p>RECIPE <span class="actually">ACTUALLY</span> BY: <a href="http://www.foodnetwork.com/recipes/sandra-lee/bourbon-honey-glazed-ham-recipe.html"><span>FOOD NETWORK</span></a></p>
+					<p>RECIPE BY: <span>{{ author | uppercase }}</span></p>
+					<p>RECIPE <span class="actually">ACTUALLY</span> BY: <a href="http://www.foodnetwork.com/recipes/sandra-lee/bourbon-honey-glazed-ham-recipe.html"><span>{{ trueAuthor | uppercase }}</span></a></p>
 
 				</div>
 				<div class="col-xs-12 col-sm-4 col-sm-offset-4">
@@ -107,10 +93,18 @@
 	</div>
 
 
-	<script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="js/jquery-2.2.2.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+	<script src= "js/angular.min.js"></script>
+	<script src= "js/angular-route.min.js"></script>
+
+
+	<script src="js/app.js"></script>
+	<script src="js/controllers/MainController.js"></script>
+
 
 	<!-- Main Javascript-->
-	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

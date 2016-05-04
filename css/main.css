@@ -256,7 +256,9 @@ footer {
   vertical-align: middle;
   padding: 6.7px;
   color: #fff;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 1.7em;
+  text-align: center; }
 
 .groceryCheck + p {
   display: inline-block;
@@ -264,7 +266,9 @@ footer {
   color: #fff;
   padding: 2px 20px;
   margin-left: -4.5px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  text-align: center;
+  width: 12em; }
 
 @media (min-width: 768px) {
   .un-button {

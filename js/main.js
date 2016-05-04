@@ -1,5 +1,4 @@
 
-
 function groceryModeSwitch(checkbox){
 	$(".ingredients ul").toggleClass("groceryMode");
 
