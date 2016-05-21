@@ -132,7 +132,7 @@ a, a:hover, a:active, a:visited{
   }
 }
 
-.allIngredients{
+.allIngredientsCheckedMessage{
   position: absolute;
   padding:50px 20px;
   top: 10%;
@@ -158,16 +158,12 @@ a, a:hover, a:active, a:visited{
       transform: rotate(90deg);
 }
 
-.ham{
-  background: url("../images/ham.png")center center no-repeat;
-  background-size: cover;
-}
-
 .ingredients,.instructions,.nutrition{
   padding-bottom:30px;
 }
 .ingredients{
   padding-top:2em;
+  
   .crossOut{
     text-decoration: line-through;
     

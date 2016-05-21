@@ -30,11 +30,11 @@ function collapseMenus(arrowParent){
 
 function allCrossedOut(){
 
-	if( $(".crossOut").length === ($(".ingredients li:not(.allIngredients)").length)){
-		$(".allIngredients").addClass("active");
+	if( $(".crossOut").length === ($(".ingredients li:not(.allIngredientsCheckedMessage)").length)){
+		$(".allIngredientsCheckedMessage").addClass("active");
 	}
 	else{
-		$(".allIngredients").removeClass("active");
+		$(".allIngredientsCheckedMessage").removeClass("active");
 	}
 }
 
@@ -71,7 +71,7 @@ $(".groceryCheck").on("click", function(){
 });
 
 
-$(".ingredients li:not(.allIngredients)").on("click", function (){
+$(".ingredients li:not(.allIngredientsCheckedMessage)").on("click", function (){
 
 	if( $(".ingredients ul").hasClass("groceryMode") ){
 		$(this).toggleClass("crossOut");
