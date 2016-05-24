@@ -10,6 +10,7 @@ app.controller("recipesController", function($scope, $firebaseObject, $firebaseA
 	$scope.ingredients = $firebaseArray(rootRef.child('recipes').child('bourbonHoneyHam').child("ingredients"));
 	$scope.instructions = $firebaseArray(rootRef.child('recipes').child('bourbonHoneyHam').child("instructions"));
 
+
 	$scope.bannerImage = {
 		"background":"url("+'images/ham.png'+")center center no-repeat",
 		"background-size" : "cover"

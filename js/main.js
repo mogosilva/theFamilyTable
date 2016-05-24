@@ -10,7 +10,7 @@ function groceryModeSwitch(checkbox){
 	else{
 		$(".groceryCheck").removeClass("fa-check").toggleClass("fa-times");
 		$(".ingredients li").removeClass("crossOut");
-		$(".allIngredients").removeClass("active");
+		$(".allIngredientsCheckedMessage").removeClass("active");
 		$("#groceryText").text("View as Grocery List?");
 	}
 }
@@ -71,7 +71,7 @@ $(".groceryCheck").on("click", function(){
 });
 
 
-$(".ingredients li:not(.allIngredientsCheckedMessage)").on("click", function (){
+$(".ingredients ul").on("click","li", function (){
 
 	if( $(".ingredients ul").hasClass("groceryMode") ){
 		$(this).toggleClass("crossOut");
