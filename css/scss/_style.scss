@@ -51,6 +51,14 @@ body{
 }
 .dropdown-menu{
   width: 100%;
+  text-align: center;
+  li{
+    border-bottom: 2px solid $dark;
+    padding: 5px 0;
+  }
+  li:last-child{
+    border-bottom: none;
+  }
 }
 
 a, a:hover, a:active, a:visited{
