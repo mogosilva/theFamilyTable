@@ -10,7 +10,7 @@ function groceryModeSwitch(checkbox){
 	else{
 		$(".groceryCheck").removeClass("fa-check").toggleClass("fa-times");
 		$(".ingredients li").removeClass("crossOut");
-		$(".allIngredients").removeClass("active");
+		$(".allIngredientsCheckedMessage").removeClass("active");
 		$("#groceryText").text("View as Grocery List?");
 	}
 }
@@ -30,11 +30,11 @@ function collapseMenus(arrowParent){
 
 function allCrossedOut(){
 
-	if( $(".crossOut").length === ($(".ingredients li:not(.allIngredients)").length)){
-		$(".allIngredients").addClass("active");
+	if( $(".crossOut").length === ($(".ingredients li:not(.allIngredientsCheckedMessage)").length)){
+		$(".allIngredientsCheckedMessage").addClass("active");
 	}
 	else{
-		$(".allIngredients").removeClass("active");
+		$(".allIngredientsCheckedMessage").removeClass("active");
 	}
 }
 
@@ -71,7 +71,7 @@ $(".groceryCheck").on("click", function(){
 });
 
 
-$(".ingredients li:not(.allIngredients)").on("click", function (){
+$(".ingredients ul").on("click","li", function (){
 
 	if( $(".ingredients ul").hasClass("groceryMode") ){
 		$(this).toggleClass("crossOut");
