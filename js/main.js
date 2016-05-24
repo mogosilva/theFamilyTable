@@ -65,9 +65,9 @@ $('.fa-play').click(function (){
 });
 
 
-$(".groceryCheck").on("click", function(){
-	$(this).toggleClass("checked");
-	groceryModeSwitch(this);
+$(".groceryCheck, #groceryText").on("click", function(){
+	$(".groceryCheck").toggleClass("checked");
+	groceryModeSwitch(".groceryCheck");
 });
 
 
