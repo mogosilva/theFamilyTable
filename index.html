@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
 	<!-- Main CSS -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body ng-controller="recipesController">
 
 	<div class="container-fluid">
 		<header>
@@ -36,9 +36,8 @@
 					<a class="btn un-button" href="#"></i> what's for <span>lunch</span>?</a>
 					<a class="btn custom-button dropdown-toggle" data-toggle="dropdown" href="#"><span class="fa fa-chevron-down"></span></a>
 					<ul class="dropdown-menu">
-					    <li><a href="recipe.html"></i>BOURBON HONEY HAM</a></li>
-					    <li class="divider"></li>
-					    <li><a href="#"><i class="i"></i>OREO CHOCOLATE MOUSSE PIE</a></li>
+					    <li ng-repeat="recipes in allRecipes"><a href="recipe.html" ng-click="store(recipes.$id)">{{ recipes.title | uppercase }}</a></li>
+					    
 				  	</ul>
 				</div>	
 			</div>
